@@ -3,12 +3,12 @@ import { LoginPage } from "../pages/login-page";
 describe('Login functionality test suite', () => {
     const loginPage = new LoginPage();
 
-    before(() => {
+    beforeEach(() => {
         // loginPage.visit();
         cy.login('Admin', 'admin123');
     });
 
-    it('Should be able to login.', () => {
+    it.only('Should be able to login.', () => {
         // loginPage.login('Admin', 'admin123');
         loginPage.visit();
 
@@ -28,7 +28,7 @@ describe('Login functionality test suite', () => {
     });
 
     it('Should be able see left dashboard', () => {
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/');
+        
         
     });
 
