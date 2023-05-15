@@ -23,7 +23,7 @@ export class LoginPage extends BasePage {
     cy.get(this.selectors.passwordInput).type(password, { log: false });
   }
 
-  login(username, password) {
+  login(username = Cypress.env('username'), password = Cypress.env('password')) {
     this.fillInUsername(username);
     this.fillInPassword(password);
     cy.get(this.selectors.loginBtn).click();

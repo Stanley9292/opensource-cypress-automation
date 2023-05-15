@@ -4,10 +4,9 @@ describe('Dashboard functionality test suite', () => {
     const dashboardPage = new DashboardPage();
 
     beforeEach(() => {
-        cy.login('Admin', 'admin123');
+        cy.login();
         dashboardPage.visitPage();
     });
-
 
     it('Should be able see left dashboard', () => {
         cy.get(dashboardPage.selectors.sideMenuPanel).should('be.visible');

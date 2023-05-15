@@ -5,7 +5,7 @@ describe('Login functionality test suite', () => {
 
     beforeEach(() => {
         // loginPage.visit();
-        cy.login('Admin', 'admin123');
+        cy.login();
     });
 
     it.only('Should be able to login.', () => {
